@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     
-    @IBOutlet weak var passwordTextFild: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     private let loginController = LoginController()
     
@@ -21,14 +21,22 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {
-        guard let username = usernameTextField.text,let password = passwordTextFild.text
+        guard
+            let username = usernameTextField.text,
+            let password = passwordTextField.text
         else {return}
         
         Task{
             let response = await loginController.login(username: username, password: password)
             
-            if response != nil{
+            if response != nil {
                 performSegue(withIdentifier: "goToMainView", sender: self)
+            }else {
+                let alert = UIAlertController(title: "Login Failure", message: "There was an error loggin in.", preferredStyle: .alert)
+                
+                let action = UIAlertAction(title: "Okey", style: .cancel)
+                alert.addAction(action)
+                present(alert, animated: true)
             }
         }
     }

@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+
 final class ApiDataSource {
     private let host = "https://dummyjson.com"
     
     func logIn(username: String, password: String) async -> LoginResponse? {
+        
         guard let url = URL(string: "\(host)/auth/login") else {return nil}
         
         do {
@@ -31,6 +33,7 @@ final class ApiDataSource {
             let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
             
             return loginResponse
+            
         } catch {
             return nil
         }
