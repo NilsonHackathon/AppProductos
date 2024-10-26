@@ -77,30 +77,30 @@
                     <connections>
                         <outlet property="passwordTextField" destination="0YV-3d-K7j" id="GG5-I6-ej8"/>
                         <outlet property="usernameTextField" destination="UcG-1Z-zIh" id="ddx-bt-cc1"/>
-                        <segue destination="q9E-Ec-hEN" kind="show" id="LMb-WN-kJM"/>
+                        <segue destination="q9E-Ec-hEN" kind="show" identifier="goToMainView" id="C5r-sJ-BPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1080" y="21"/>
         </scene>
-        <!--goToMainView-->
+        <!--Main view Controller-->
         <scene sceneID="1N7-ru-cxF">
             <objects>
-                <tableViewController storyboardIdentifier="goToMainView" id="q9E-Ec-hEN" userLabel="goToMainView" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="Main view Controller" storyboardIdentifier="Main view Controller" id="q9E-Ec-hEN" userLabel="Main view Controller" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dDk-7c-oVC"/>
                     <connections>
-                        <segue destination="Tqg-zL-s1c" kind="show" id="xsa-Jo-W7D"/>
+                        <segue destination="Tqg-zL-s1c" kind="show" identifier="goToAddProduct" id="SKv-hc-2FJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYB-Ue-bnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-254" y="15"/>
         </scene>
-        <!--addProductsView-->
+        <!--add Products View Controller-->
         <scene sceneID="zZV-oL-BAh">
             <objects>
-                <viewController storyboardIdentifier="addProductsView" id="Tqg-zL-s1c" userLabel="addProductsView" sceneMemberID="viewController">
+                <viewController restorationIdentifier="add Products View Controller" storyboardIdentifier="add Products View Controller" id="Tqg-zL-s1c" userLabel="add Products View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OV4-O7-1cu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

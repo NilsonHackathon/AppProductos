@@ -24,21 +24,23 @@ class LoginViewController: UIViewController {
         guard
             let username = usernameTextField.text,
             let password = passwordTextField.text
-        else {return}
+        else { return }
         
         Task{
             let response = await loginController.login(username: username, password: password)
             
             if response != nil {
                 performSegue(withIdentifier: "goToMainView", sender: self)
-            }else {
-                let alert = UIAlertController(title: "Login Failure", message: "There was an error loggin in.", preferredStyle: .alert)
+            }else{
+                let alert = UIAlertController(title: "Login failured", message: "There was an error loggin in", preferredStyle: .alert)
                 
-                let action = UIAlertAction(title: "Okey", style: .cancel)
+                let action = UIAlertAction(title: "ok", style: .cancel)
                 alert.addAction(action)
+                
                 present(alert, animated: true)
             }
-        }
+            
+           }
     }
     
 }

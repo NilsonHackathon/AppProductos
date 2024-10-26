@@ -13,7 +13,7 @@ final class ApiDataSource {
     
     func logIn(username: String, password: String) async -> LoginResponse? {
         
-        guard let url = URL(string: "\(host)/auth/login") else {return nil}
+        guard let url = URL(string: "\(host)/auth/login") else { return nil }
         
         do {
             var urlRequest = URLRequest(url: url)
