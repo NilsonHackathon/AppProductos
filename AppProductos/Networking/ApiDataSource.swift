@@ -72,6 +72,39 @@ final class ApiDataSource {
         }
     }
     
+    
+    func cargarFoto(url: String) async -> UIImage? {
+        
+    }
+    
+    func createProduct(_ product: ProductModel) async -> Bool {
+        guard let url = URL(string: "\(host)/auth/products/add"),
+              let token = getToken()
+        else{
+            return false
+        }
+        
+        do {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            urlRequest.httpBody = try JSONEncoder().encode(product)
+            
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            
+            guard let urlResponse = response as? HTTPURLResponse, urlResponse.statusCode == 201
+            else{
+                return false
+            }
+            
+            return true
+        }
+        catch{
+            return false
+        }
+    }
+    
     private func saveToken(_ token: String) {
         UserDefaults.standard.set(token, forKey: "token")
     }

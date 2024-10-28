@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="-323.1884057971015" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Anexar Producto View Controller-->
         <scene sceneID="zZV-oL-BAh">
             <objects>
-                <viewController id="Tqg-zL-s1c" sceneMemberID="viewController">
+                <viewController id="Tqg-zL-s1c" customClass="AnexarProductoViewController" customModule="AppProductos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OV4-O7-1cu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,6 +167,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add button"/>
+                                <connections>
+                                    <action selector="buttonAgregarProductAction:" destination="Tqg-zL-s1c" eventType="touchUpInside" id="tPf-9w-Soj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LfB-nI-ZnU"/>
@@ -190,6 +193,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1CG-io-5Ee"/>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="dcM-wx-LOU" id="JYh-8v-l8o"/>
+                        <outlet property="existenciaTextField" destination="d84-BM-vZp" id="DEf-Z3-WSF"/>
+                        <outlet property="precioTextField" destination="7aG-mw-U44" id="tj8-Br-YKL"/>
+                        <outlet property="tituloTextField" destination="9jo-1z-Cqx" id="DYS-Ow-Y1W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kE-9b-jFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

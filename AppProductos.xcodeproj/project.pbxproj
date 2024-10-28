@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7719FEC02CD02BF300534C7F /* AnexarProductoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7719FEBF2CD02BF300534C7F /* AnexarProductoController.swift */; };
 		775CA04E2CCEE13C00061DCE /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775CA04D2CCEE13C00061DCE /* ProductModel.swift */; };
 		777D20CD2CCF2DC9009E71B8 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D20CC2CCF2DC9009E71B8 /* MainController.swift */; };
 		7783491D2CC35CA000F2509F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783491C2CC35CA000F2509F /* AppDelegate.swift */; };
@@ -22,9 +23,11 @@
 		77B02E422CCF16A4001431F9 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B02E402CCF16A4001431F9 /* ProductTableViewCell.swift */; };
 		77B02E432CCF16A4001431F9 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77B02E412CCF16A4001431F9 /* ProductTableViewCell.xib */; };
 		77C041652CCD973900AA088E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C041642CCD973900AA088E /* MainViewController.swift */; };
+		77EC0CB52CD026620024D472 /* AnexarProductoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC0CB42CD026620024D472 /* AnexarProductoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7719FEBF2CD02BF300534C7F /* AnexarProductoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnexarProductoController.swift; sourceTree = "<group>"; };
 		775CA04D2CCEE13C00061DCE /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		777D20CC2CCF2DC9009E71B8 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		778349192CC35CA000F2509F /* AppProductos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppProductos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +45,7 @@
 		77B02E402CCF16A4001431F9 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		77B02E412CCF16A4001431F9 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		77C041642CCD973900AA088E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		77EC0CB42CD026620024D472 /* AnexarProductoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnexarProductoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		778349362CC36DB200F2509F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				77EC0CB32CD026140024D472 /* AddProdcutView */,
 				77C041632CCD95E900AA088E /* MainView */,
 				778349332CC3697E00F2509F /* LoginView */,
 			);
@@ -140,6 +145,15 @@
 				77C041642CCD973900AA088E /* MainViewController.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		77EC0CB32CD026140024D472 /* AddProdcutView */ = {
+			isa = PBXGroup;
+			children = (
+				77EC0CB42CD026620024D472 /* AnexarProductoViewController.swift */,
+				7719FEBF2CD02BF300534C7F /* AnexarProductoController.swift */,
+			);
+			path = AddProdcutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +234,8 @@
 				778349212CC35CA000F2509F /* LoginViewController.swift in Sources */,
 				778349272CC35CA000F2509F /* AppProductos.xcdatamodeld in Sources */,
 				7783491D2CC35CA000F2509F /* AppDelegate.swift in Sources */,
+				7719FEC02CD02BF300534C7F /* AnexarProductoController.swift in Sources */,
+				77EC0CB52CD026620024D472 /* AnexarProductoViewController.swift in Sources */,
 				7783491F2CC35CA000F2509F /* SceneDelegate.swift in Sources */,
 				775CA04E2CCEE13C00061DCE /* ProductModel.swift in Sources */,
 				778349352CC369E000F2509F /* LoginController.swift in Sources */,

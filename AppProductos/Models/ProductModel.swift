@@ -11,7 +11,7 @@ struct ProductResponse: Decodable {
     let products: [ProductModel]
 }
 
-struct ProductModel: Hashable, Decodable {
+struct ProductModel: Hashable, Decodable, Encodable {
     let id: Int?
     let title: String
     let description: String
