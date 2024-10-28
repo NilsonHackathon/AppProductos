@@ -30,9 +30,12 @@ class MainViewController: UIViewController {
     
     private var products = [ProductModel]()
     
-    private lazy var dataSoruce: DataSource = {
+    private lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView) {
             tableView, IndexPath, ProductModel in let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: IndexPath) as? ProductTableViewCell
+            
+            cell?.nameProductLabel.text = ProductModel.title
+            cell?.priceProductLabel.text = "$\(ProductModel.price)"
             
             return cell
         }
@@ -81,11 +84,21 @@ class MainViewController: UIViewController {
         
         snapshot.appendSections([.main])
         snapshot.appendItems(products)
+        
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 }
 
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
+        guard
+            let query = searchController.searchBar.text else {
+            return
+        }
         
+        Task {
+            products = await mainController.tomarProducto(query: query) ?? []
+            applySnapshot()
+        }
     }
 }
