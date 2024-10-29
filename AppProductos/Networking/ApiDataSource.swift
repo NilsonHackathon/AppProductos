@@ -74,7 +74,25 @@ final class ApiDataSource {
     
     
     func cargarFoto(url: String) async -> UIImage? {
+        guard let url = URL(string: url) else {
+            return nil
+        }
         
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
+            guard
+                let urlResponse = response as? HTTPURLResponse, urlResponse.statusCode == 200
+            else{
+                return nil
+            }
+            
+            let image = UIImage(data: data)
+            
+            return image
+        }catch {
+            return nil
+        }
     }
     
     func createProduct(_ product: ProductModel) async -> Bool {

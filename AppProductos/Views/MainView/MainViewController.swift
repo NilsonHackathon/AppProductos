@@ -37,6 +37,11 @@ class MainViewController: UIViewController {
             cell?.nameProductLabel.text = ProductModel.title
             cell?.priceProductLabel.text = "$\(ProductModel.price)"
             
+            
+            Task {
+                cell?.imageProductView.image = await self.mainController.loadImage(url: ProductModel.thumbnail)
+            }
+            
             return cell
         }
         
